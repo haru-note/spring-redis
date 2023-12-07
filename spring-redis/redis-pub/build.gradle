@@ -1,0 +1,17 @@
+tasks.named('bootJar'){
+    enabled = true
+}
+
+tasks.named('jar'){
+    enabled = true
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '7.0.5.Final'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+}
